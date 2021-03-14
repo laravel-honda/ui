@@ -1,6 +1,5 @@
 <?php
 
-
-use Starts\Karter\Tests\TestCase;
+use Starts\Ui\Tests\TestCase;
 
 uses(TestCase::class)->in('Components');

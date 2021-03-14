@@ -1,6 +1,6 @@
 <?php
 
-namespace Starts\Karter\Components;
+namespace Starts\Ui\Components;
 
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
@@ -28,6 +28,6 @@ class Title extends Component
      */
     public function render()
     {
-        return view('karter::title');
+        return view('ui::title');
     }
 }

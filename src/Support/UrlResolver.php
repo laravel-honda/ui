@@ -1,6 +1,6 @@
 <?php
 
-namespace Starts\Karter\Support;
+namespace Starts\Ui\Support;
 
 use Illuminate\Support\Str;
 use Symfony\Component\Routing\Exception\RouteNotFoundException;
@@ -8,9 +8,6 @@ use Symfony\Component\Routing\Exception\RouteNotFoundException;
 final class UrlResolver
 {
     /**
-     * @param string|null $url
-     * @param array $context
-     * @return string
      * @internal
      */
     public static function guess(?string $url = '', array $context = []): string

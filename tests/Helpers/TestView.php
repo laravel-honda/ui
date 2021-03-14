@@ -23,20 +23,20 @@ class TestView
     /**
      * Create a new test view instance.
      *
-     * @param  \Illuminate\View\View  $view
      * @return void
      */
     public function __construct(View $view)
     {
-        $this->view = $view;
+        $this->view     = $view;
         $this->rendered = $view->render();
     }
 
     /**
      * Assert that the given string is contained within the view.
      *
-     * @param  string  $value
-     * @param  bool  $escaped
+     * @param string $value
+     * @param bool   $escaped
+     *
      * @return $this
      */
     public function assertSee($value, $escaped = true)
@@ -51,8 +51,8 @@ class TestView
     /**
      * Assert that the given strings are contained in order within the view.
      *
-     * @param  array  $values
-     * @param  bool  $escape
+     * @param bool $escape
+     *
      * @return $this
      */
     public function assertSeeInOrder(array $values, $escape = true)
@@ -67,8 +67,9 @@ class TestView
     /**
      * Assert that the given string is contained within the view text.
      *
-     * @param  string  $value
-     * @param  bool  $escape
+     * @param string $value
+     * @param bool   $escape
+     *
      * @return $this
      */
     public function assertSeeText($value, $escape = true)
@@ -83,8 +84,8 @@ class TestView
     /**
      * Assert that the given strings are contained in order within the view text.
      *
-     * @param  array  $values
-     * @param  bool  $escape
+     * @param bool $escape
+     *
      * @return $this
      */
     public function assertSeeTextInOrder(array $values, $escape = true)
@@ -99,8 +100,9 @@ class TestView
     /**
      * Assert that the given string is not contained within the view.
      *
-     * @param  string  $value
-     * @param  bool  $escape
+     * @param string $value
+     * @param bool   $escape
+     *
      * @return $this
      */
     public function assertDontSee($value, $escape = true)
@@ -115,8 +117,9 @@ class TestView
     /**
      * Assert that the given string is not contained within the view text.
      *
-     * @param  string  $value
-     * @param  bool  $escape
+     * @param string $value
+     * @param bool   $escape
+     *
      * @return $this
      */
     public function assertDontSeeText($value, $escape = true)

@@ -1,10 +1,10 @@
 <?php
 
-namespace Starts\Karter\Components;
+namespace Starts\Ui\Components;
 
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
-use Starts\Karter\Support\UrlResolver;
+use Starts\Ui\Support\UrlResolver;
 
 class Form extends Component
 {
@@ -21,6 +21,6 @@ class Form extends Component
 
     public function render(): View
     {
-        return view('karter::form');
+        return view('ui::form');
     }
 }

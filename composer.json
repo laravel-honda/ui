@@ -1,5 +1,5 @@
 {
-    "name": "starts/karter",
+    "name": "starts/ui",
     "description": "UI components library.",
     "license": "MIT",
     "authors": [
@@ -21,12 +21,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Starts\\Karter\\": "src/"
+            "Starts\\Ui\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Starts\\Karter\\Tests\\": "tests/"
+            "Starts\\Ui\\Tests\\": "tests/"
         }
     },
     "minimum-stability": "dev",
@@ -38,7 +38,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Starts\\Karter\\KarterServiceProvider"
+                "Starts\\Ui\\UiServiceProvider"
             ]
         }
     },

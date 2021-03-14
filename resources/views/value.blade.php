@@ -1,0 +1,1 @@
+<input type="hidden" name="{{ $key }}" @if ($value) value="{{ $value }}" @endif {{ $attributes }} />

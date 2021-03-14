@@ -1,10 +1,10 @@
 <?php
 
-namespace Starts\Karter\Tests;
+namespace Starts\Ui\Tests;
 
 use Gajus\Dindent\Indenter;
 use Orchestra\Testbench\TestCase as Base;
-use Starts\Karter\KarterServiceProvider;
+use Starts\Ui\UiServiceProvider;
 use Tests\Concerns\InteractsWithViews;
 
 abstract class TestCase extends Base
@@ -47,6 +47,6 @@ abstract class TestCase extends Base
 
     protected function getPackageProviders($app): array
     {
-        return [KarterServiceProvider::class];
+        return [UiServiceProvider::class];
     }
 }
