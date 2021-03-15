@@ -1,10 +1,10 @@
 <?php
 
-namespace Starts\Ui\Components;
+namespace Honda\Ui\Components;
 
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
-use Starts\Ui\Support\UrlResolver;
+use Honda\Ui\Support\UrlResolver;
 
 class Form extends Component
 {

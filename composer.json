@@ -1,5 +1,5 @@
 {
-    "name": "starts/ui",
+    "name": "honda/ui",
     "description": "UI components library.",
     "license": "MIT",
     "authors": [
@@ -21,12 +21,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Starts\\Ui\\": "src/"
+            "Honda\\Ui\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Starts\\Ui\\Tests\\": "tests/"
+            "Honda\\Ui\\Tests\\": "tests/"
         }
     },
     "minimum-stability": "dev",
@@ -38,7 +38,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Starts\\Ui\\UiServiceProvider"
+                "Honda\\Ui\\UiServiceProvider"
             ]
         }
     },

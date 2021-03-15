@@ -1,10 +1,10 @@
 <?php
 
-namespace Starts\Ui\Tests;
+namespace Honda\Ui\Tests;
 
 use Gajus\Dindent\Indenter;
 use Orchestra\Testbench\TestCase as Base;
-use Starts\Ui\UiServiceProvider;
+use Honda\Ui\UiServiceProvider;
 use Tests\Concerns\InteractsWithViews;
 
 abstract class TestCase extends Base

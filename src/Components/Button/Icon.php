@@ -1,6 +1,6 @@
 <?php
 
-namespace Starts\Ui\Components\Button;
+namespace Honda\Ui\Components\Button;
 
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;

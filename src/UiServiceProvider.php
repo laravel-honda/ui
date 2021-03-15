@@ -1,6 +1,6 @@
 <?php
 
-namespace Starts\Ui;
+namespace Honda\Ui;
 
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\ServiceProvider;
@@ -13,7 +13,7 @@ class UiServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'ui');
         $this->loadViewComponentsAs('ui',
             collect(File::allFiles(__DIR__ . '/Components/')
-            )->map(fn (SplFileInfo $file) => "Starts\\Ui\\Components\\{$file->getFilenameWithoutExtension()}")
+            )->map(fn (SplFileInfo $file) => "Honda\\Ui\\Components\\{$file->getFilenameWithoutExtension()}")
                 ->toArray());
 
         if (!$this->app->runningInConsole()) {

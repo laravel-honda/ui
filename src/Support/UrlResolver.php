@@ -1,6 +1,6 @@
 <?php
 
-namespace Starts\Ui\Support;
+namespace Honda\Ui\Support;
 
 use Illuminate\Support\Str;
 use Symfony\Component\Routing\Exception\RouteNotFoundException;

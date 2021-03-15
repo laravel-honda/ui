@@ -1,6 +1,6 @@
 <?php
 
-namespace Starts\Ui\Components\Button;
+namespace Honda\Ui\Components\Button;
 
 use Illuminate\View\Component;
 use InvalidArgumentException;

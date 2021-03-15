@@ -13,7 +13,7 @@
         <a href="{{ $link }}">
             <x-dynamic-component :component="'fab-' . $type" {{ $attributes->merge([
                 'class' => sprintf('w-%s h-%s', $size, $size),
-                'style' => $branded ? sprintf('color: %s', \Starts\Ui\Components\Social::BRAND_COLORS[$type]) : ''
+                'style' => $branded ? sprintf('color: %s', \Honda\Ui\Components\Social::BRAND_COLORS[$type]) : ''
             ]) }} />
         </a>
     @endif

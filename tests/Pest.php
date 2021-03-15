@@ -1,5 +1,5 @@
 <?php
 
-use Starts\Ui\Tests\TestCase;
+use Honda\Ui\Tests\TestCase;
 
 uses(TestCase::class)->in('Components');

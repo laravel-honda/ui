@@ -1,9 +1,9 @@
 <?php
 
-namespace Starts\Ui\Components\Dropdown;
+namespace Honda\Ui\Components\Dropdown;
 
 use Illuminate\View\Component;
-use Starts\Ui\Support\UrlResolver;
+use Honda\Ui\Support\UrlResolver;
 
 class Link extends Component
 {

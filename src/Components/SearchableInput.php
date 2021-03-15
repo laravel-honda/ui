@@ -1,6 +1,6 @@
 <?php
 
-namespace Starts\Ui\Components;
+namespace Honda\Ui\Components;
 
 class SearchableInput extends Input
 {
