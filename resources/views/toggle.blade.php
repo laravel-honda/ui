@@ -10,8 +10,8 @@
         @endif
         <span x-bind:class="{ 'translate-x-0': !checked, 'translate-x-5': checked }" aria-hidden="true"
               class="inline-flex items-center justify-center h-5 w-5 rounded-full bg-white shadow transform transition ease-in-out duration-200 pointer-events-none">
-            <x-icon name="x" size="3" class="text-gray-500" solid x-show="!checked"/>
-            <x-icon name="check" size="3" class="text-{{ $color }}-600" solid x-show="checked"/>
+            <x-ui-icon name="x" size="3" class="text-gray-500" solid x-show="!checked"/>
+            <x-ui-icon name="check" size="3" class="text-{{ $color }}-600" solid x-show="checked"/>
         </span>
         <input @click="if (!disabled) { checked = !checked }" type="checkbox" id="{{ $name }}"
             {{ $attributes->merge([

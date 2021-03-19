@@ -4,5 +4,5 @@
     "hover:bg-$color-400 active:bg-$color-500" => !$attributes->has('disabled'),
     "pointer-events-none" => $attributes->has('disabled')
 ]) }}>
-    <x-icon :name="$icon" :size="5" :set="$iconSet" solid />
+    <x-ui-icon :name="$icon" :size="5" :set="$iconSet" solid />
 </button>

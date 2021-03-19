@@ -1,5 +1,5 @@
 <div>
-    <x-input
+    <x-ui-input
         type="number"
         pattern="[0-9]+"
         autocomplete="off"

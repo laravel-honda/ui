@@ -15,5 +15,5 @@
     id="{{ $id }}"
     {{ $attributes }}
 ></div>
-<x-script link="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js" />
-<x-style link="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css" />
+<x-assets-script href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"/>
+<x-assets-style href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css"/>

@@ -15,13 +15,13 @@
                 </template>
 
                 <template x-if="!stars[{{ $i }}]">
-                    <x-icon name="star" class="text-gray-400" :size="$size"/>
+                    <x-ui-icon name="star" class="text-gray-400" :size="$size"/>
                 </template>
             </button>
         @endfor
     </div>
 
     @if ($name !== null)
-        <x-value key="{{ $name }}" x-bind:value="stars.filter((_) => _ === true).length"/>
+        <x-ui-value key="{{ $name }}" x-bind:value="stars.filter((_) => _ === true).length"/>
     @endif
 </div>

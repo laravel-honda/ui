@@ -3,6 +3,6 @@
     {{ $content ?? $slot }}
 
     @if ($icon)
-        <x-icon :name="$icon" :set="$iconSet" size="4" class="ml-1" solid/>
+        <x-ui-icon :name="$icon" :set="$iconSet" size="4" class="ml-1" solid/>
     @endif
 </a>

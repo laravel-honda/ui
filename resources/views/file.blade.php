@@ -1,5 +1,5 @@
-<x-script link="https://unpkg.com/create-file-list"/>
-<x-script>
+<x-assets-script link="https://unpkg.com/create-file-list"/>
+<x-assets-script>
     function dataFileDnD() {
     return {
     files: [],
@@ -66,7 +66,7 @@
     }
     };
     }
-</x-script>
+</x-assets-script>
 <div class="w-full flex flex-col @if(!$first) mt-4 @endif">
     @if (!$hideLabel || $name === null)
         <label class="text-gray-700" for="{{ $name }}">{{ $label }}</label>
@@ -83,7 +83,7 @@
                title=""/>
         <div x-ref="dnd" class="flex items-center border rounded-lg bg-white w-full p-4 cursor-pointer">
             <div class="inline-flex bg-white border rounded-full p-1">
-                <x-icon name="plus" size="4" class="text-gray-600"/>
+                <x-ui-icon name="plus" size="4" class="text-gray-600"/>
             </div>
 
             <span
@@ -106,7 +106,7 @@
                                 x-if="!files[index].type.includes('video/') && !files[index].type.includes('image/')"
                                 hidden>
                                 <div class="w-24 h-20 border rounded-lg flex items-center justify-center p-4">
-                                    <x-icon name="document-text" size="8" class="text-gray-500"/>
+                                    <x-ui-icon name="document-text" size="8" class="text-gray-500"/>
                                 </div>
                             </template>
                             <template x-if="files[index].type.includes('video/')" hidden>
@@ -121,7 +121,7 @@
                                     x-bind:src="loadFile(files[index])"/>
                             </template>
                             <div class="flex flex-col ml-4 justify-between text-gray-500">
-                                <x-overline x-text="files[index].name.split('.').slice(-1)[0]" content="..."/>
+                                <x-ui-overline x-text="files[index].name.split('.').slice(-1)[0]" content="..."/>
                                 <span x-text="files[index].name" class="truncate">Loading</span>
                                 <span x-text="humanFileSize(files[index].size)">...</span>
 
@@ -142,7 +142,7 @@
     @if ($name)
         @error($name)
         <p class="flex items-center text-red-500 mt-2">
-            <x-icon name="exclamation-circle" solid size="5"/>
+            <x-ui-icon name="exclamation-circle" solid size="5"/>
             <span class="inline-block ml-2">{{ $message }}</span>
         </p>
         @enderror

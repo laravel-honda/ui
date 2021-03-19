@@ -7,7 +7,7 @@
                 <div class="flex items-center justify-between bg-gray-900 p-4">
                     <div class="flex-1">
                         <div class="mx-2 my-3">
-                            <x-application-logo context="sidebar"/>
+                            <x-ui-application-logo context="sidebar"/>
                         </div>
                     </div>
 
@@ -15,7 +15,7 @@
                 <button @click="open = false"
                         x-show="open"
                         class="absolute top-0 right-0 -mr-12 text-white mt-2 p-2 lg:hidden focus:outline-none">
-                    <x-icon name="x" size="6"/>
+                    <x-ui-icon name="x" size="6"/>
                 </button>
                 <nav>
                     <div class="px-3 mt-4 space-y-2 lg:space-y-3">
@@ -25,7 +25,7 @@
                                    class="transition duration-100 flex items-center px-4 @if ($item->icon) py-3 @else py-3.5 @endif rounded-lg @if ($item->isActive()) bg-gray-900 @else hover:bg-gray-900 @endif"
                                    @if ($item->isActive()) aria-current="page" @endif>
                                     @if ($item->icon)
-                                        <x-icon name="{{ $item->icon }}" size="5" class="text-gray-500"
+                                        <x-ui-icon name="{{ $item->icon }}" size="5" class="text-gray-500"
                                                 icon-set="{{ $item->iconSet }}"/>
                                     @endif
                                     <span
@@ -42,7 +42,7 @@
                                            class="transition duration-100 flex items-center px-4 @if ($child->icon) py-3 @else py-3.5 @endif rounded-lg @if ($child->isActive()) bg-gray-900 @else hover:bg-gray-900 @endif"
                                            @if ($child->isActive()) aria-current="page" @endif>
                                             @if ($child->icon)
-                                                <x-icon name="{{ $child->icon }}" size="5" class="text-gray-500"
+                                                <x-ui-icon name="{{ $child->icon }}" size="5" class="text-gray-500"
                                                         icon-set="{{ $child->iconSet }}"/>
                                             @endif
                                             <span

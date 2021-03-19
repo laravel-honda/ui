@@ -13,7 +13,7 @@
     >
 
         @if ($icon)
-            <x-icon :name="$icon" :set="$iconSet" size="3.5" solid/>
+            <x-ui-icon :name="$icon" :set="$iconSet" size="3.5" solid/>
         @endif
 
         <span

@@ -1,6 +1,6 @@
 @php($id = uniqid())
 <div>
-    <x-input
+    <x-ui-input
         type="password"
         x-bind:type="hidePassword ? 'password' : 'text'"
         :name="$name"

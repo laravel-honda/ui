@@ -1,3 +1,3 @@
-<x-form :action="$action" :method="$method">
+<x-ui-form :action="$action" :method="$method">
     <x-dynamic-component :component="$extends" {{ $attributes }} />
-</x-form>
+</x-ui-form>

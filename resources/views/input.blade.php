@@ -6,7 +6,7 @@
         @if ($icon)
             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
               <span class="text-gray-500">
-                   <x-icon :name="$icon" :set="$iconSet" size="5" class="text-gray-400" solid/>
+                   <x-ui-icon :name="$icon" :set="$iconSet" size="5" class="text-gray-400" solid/>
               </span>
             </div>
         @endif
@@ -28,7 +28,7 @@
     @if ($name)
         @error($name)
         <p class="flex items-center text-red-500 mt-2">
-            <x-icon name="exclamation-circle" solid size="5"/>
+            <x-ui-icon name="exclamation-circle" solid size="5"/>
             <span class="inline-block ml-2">{{ $message }}</span>
         </p>
         @enderror

@@ -34,5 +34,5 @@
             <input :autofocus="i == 0" :id="`pin_${i}`" class="h-16 w-16 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-{{ $color }}-500 focus:ring-offset-2 border rounded-lg flex items-center text-center text-3xl {{ $attributes->get('class') }}" value="" maxlength="1" max="9" min="0" inputmode="numeric" @input="if (isNaN($event.target.value)) { resetValue(i); } else { pin = value() }" @keyup="stepForward(i)" @keydown.backspace="stepBack(i)" @focus="resetValue(i)" placeholder="0" />
         </template>
     </div>
-    <x-value :key="$name" x-bind:value="pin" />
+    <x-ui-value :key="$name" x-bind:value="pin" />
 </div>

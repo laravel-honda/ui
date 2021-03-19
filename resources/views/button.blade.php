@@ -7,7 +7,7 @@
 ]) }}
 >
     @if (!empty($icon))
-        <x-icon :name="$icon" :size="5" :set="$iconSet" solid />
+        <x-ui-icon :name="$icon" :size="5" :set="$iconSet" solid />
     @endif
     <span class="text-md font-semibold inline-block @if(!empty($icon)) {{ $iconSide === 'right' ? 'mr-3' : 'ml-3'  }} @endif">{{ $content ?? $slot }}</span>
 </button>
