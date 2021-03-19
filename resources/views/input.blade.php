@@ -28,7 +28,7 @@
     @if ($name)
         @error($name)
         <p class="flex items-center text-red-500 mt-2">
-            <x-ui-icon name="exclamation-circle" solid size="5"/>
+            <x-ui-icon name="alert-circle" solid size="5"/>
             <span class="inline-block ml-2">{{ $message }}</span>
         </p>
         @enderror

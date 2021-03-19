@@ -1,4 +1,4 @@
-<x-assets-script link="https://unpkg.com/create-file-list"/>
+<x-assets-script href="https://unpkg.com/create-file-list"/>
 <x-assets-script>
     function dataFileDnD() {
     return {
@@ -106,7 +106,7 @@
                                 x-if="!files[index].type.includes('video/') && !files[index].type.includes('image/')"
                                 hidden>
                                 <div class="w-24 h-20 border rounded-lg flex items-center justify-center p-4">
-                                    <x-ui-icon name="document-text" size="8" class="text-gray-500"/>
+                                    <x-ui-icon name="file" size="8" class="text-gray-500"/>
                                 </div>
                             </template>
                             <template x-if="files[index].type.includes('video/')" hidden>
@@ -142,7 +142,7 @@
     @if ($name)
         @error($name)
         <p class="flex items-center text-red-500 mt-2">
-            <x-ui-icon name="exclamation-circle" solid size="5"/>
+            <x-ui-icon name="alert-circle" solid size="5"/>
             <span class="inline-block ml-2">{{ $message }}</span>
         </p>
         @enderror
