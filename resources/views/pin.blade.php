@@ -34,7 +34,7 @@
                 }
             }
         }" {{ $attributes->except('class') }}>
-    @if (!$hiddenLabel)
+    @if (!$hideLabel)
         <label for="pin_0" aria-hidden="true" class="block text-gray-800 font-display">{{ $label }}</label>
     @endif
     <div class="flex mt-2 space-x-4">
