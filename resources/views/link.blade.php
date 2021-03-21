@@ -1,5 +1,9 @@
 <a href="{{ $href }}"
-   class=" @if (!$unstyled) hover:text-{{ $color }}-{{ $color === 'gray' ? '800' : '600' }} text-{{ $color }}-{{ $color === 'gray' ? '700' : '500' }}  font-semibold @endif inline-flex items-center @if ($iconSide === 'left') flex-col-reverse @endif {{ $attributes->get('class') }}" {{ $attributes->except('class')}}>
+    {{ $attributes->class([
+     "hover:text-$color-700 text-$color-700  font-semibold" => !$unstyled,
+     "inline-flex items-center",
+     "flex-col-reverse" => $iconSide === 'left'
+ ]) }}>
     {{ $content ?? $slot }}
 
     @if ($icon)

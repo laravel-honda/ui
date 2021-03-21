@@ -53,7 +53,6 @@ class UiServiceProvider extends ServiceProvider
         Components\Dropdown\Link::class,
         Components\Dropdown\Trigger::class,
         Components\Button\Icon::class,
-        Components\Button\Form::class,
         Components\Button\Text::class,
         Components\Button\RedirectBack::class,
     ];

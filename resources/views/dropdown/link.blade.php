@@ -4,7 +4,7 @@
     @if ($icon)
         <x-ui-icon solid :name="$icon" :set="$iconSet" size="5" class="text-gray-400"/>
     @endif
-    <div class="{{ classes(['ml-2' => $icon !== null]) }}">
+    <div class="@if ($icon !== null) ml-2 @endif">
         {{ $content ?? $slot }}
     </div>
 </a>
