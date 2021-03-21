@@ -7,13 +7,13 @@
                 }
             },
             stepForward(i) {
-                if (document.getElementById(`pin_${i}`).value && i != this.length - 1) {
+                if (i != this.length - 1 && document.getElementById(`pin_${i}`).value) {
                     document.getElementById(`pin_${i+1}`).focus()
                     document.getElementById(`pin_${i+1}`).value = ''
                 }
             },
             stepBack(i) {
-                if (document.getElementById(`pin_${i-1}`).value && i != 0) {
+                if (i > 0 && document.getElementById(`pin_${i-1}`).value) {
                     document.getElementById(`pin_${i-1}`).focus()
                     document.getElementById(`pin_${i-1}`).value = ''
                 }
@@ -24,15 +24,28 @@
                     pin += document.getElementById(`pin_${x}`).value
                 }
                 return pin
+            },
+            handlePaste(event) {
+                let paste = (event.clipboardData || window.clipboardData).getData('text').substr(0, this.length)
+                paste = paste.split('')
+                for (i = 0; i < paste.length;i++) {
+                        document.getElementById(`pin_${i}`).value = paste[i]
+                        this.stepForward(i)
+                }
             }
-        }">
+        }" {{ $attributes->except('class') }}>
     @if (!$hiddenLabel)
         <label for="pin_0" aria-hidden="true" class="block text-gray-800 font-display">{{ $label }}</label>
     @endif
     <div class="flex mt-2 space-x-4">
         <template x-for="(_, i) in length" :key="`pin_${i}`" hidden>
-            <input :autofocus="i == 0" :id="`pin_${i}`" class="h-16 w-16 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-{{ $color }}-500 focus:ring-offset-2 border rounded-lg flex items-center text-center text-3xl {{ $attributes->get('class') }}" value="" maxlength="1" max="9" min="0" inputmode="numeric" @input="if (isNaN($event.target.value)) { resetValue(i); } else { pin = value() }" @keyup="stepForward(i)" @keydown.backspace="stepBack(i)" @focus="resetValue(i)" placeholder="0" />
+            <input :autofocus="i == 0" :id="`pin_${i}`"
+                   class="h-16 w-16 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-{{ $color }}-500 focus:ring-offset-2 border rounded-lg flex items-center text-center text-3xl {{ $attributes->get('class') }}"
+                   value="" maxlength="1" max="9" min="0" inputmode="numeric" autocomplete="off"
+                   @input="if (isNaN($event.target.value)) { resetValue(i); } else { pin = value() }"
+                   @paste="handlePaste($event)"
+                   @keyup="stepForward(i)" @keydown.backspace="stepBack(i)" @focus="resetValue(i)" placeholder="0" x-bind:placeholder="i+1"/>
         </template>
     </div>
-    <x-ui-value :key="$name" x-bind:value="pin" />
+    <x-ui-value :key="$name" x-bind:value="pin"/>
 </div>
