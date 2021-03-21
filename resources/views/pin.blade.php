@@ -33,7 +33,7 @@
                         this.stepForward(i)
                 }
             }
-        }" {{ $attributes->except('class') }}>
+        }" {{ $attributes->except('class', 'placeholder') }}>
     @if (!$hideLabel)
         <label for="pin_0" aria-hidden="true" class="block text-gray-800 font-display">{{ $label }}</label>
     @endif
@@ -44,7 +44,8 @@
                    value="" maxlength="1" max="9" min="0" inputmode="numeric" autocomplete="off"
                    @input="if (isNaN($event.target.value)) { resetValue(i); } else { pin = value() }"
                    @paste="handlePaste($event)"
-                   @keyup="stepForward(i)" @keydown.backspace="stepBack(i)" @focus="resetValue(i)" placeholder="0" x-bind:placeholder="i+1"/>
+                   @keyup="stepForward(i)" @keydown.backspace="stepBack(i)" @focus="resetValue(i)"
+                   placeholder="{{ $attributes->get('placeholder', 0) }}"/>
         </template>
     </div>
     <x-ui-value :key="$name" x-bind:value="pin"/>
