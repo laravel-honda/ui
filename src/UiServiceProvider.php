@@ -9,7 +9,7 @@ class UiServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'ui');
-        // Components are register manually so Laravel Idea can autocomplete them. You're welcome.
+        // Components are registered manually so Laravel Idea can autocomplete them. You're welcome.
         $this->loadViewComponentsAs('ui', [
             Components\ActionPanel::class,
             Components\Alert::class,
@@ -51,14 +51,6 @@ class UiServiceProvider extends ServiceProvider
             Components\Toggle::class,
             Components\Value::class,
             Components\Variance::class,
-            Components\Dropdown\Container::class,
-            Components\Dropdown\Divider::class,
-            Components\Dropdown\Link::class,
-            Components\Dropdown\Trigger::class,
-            Components\Button\Icon::class,
-            Components\Button\Form::class,
-            Components\Button\Text::class,
-            Components\Button\RedirectBack::class,
         ]);
 
         if (!$this->app->runningInConsole()) {
