@@ -1,6 +1,6 @@
 <a href="{{ $href }}"
     {{ $attributes->class([
-     "hover:text-$color-700 text-$color-700  font-semibold" => !$unstyled,
+     "hover:text-$color-500 text-$color-500  font-semibold" => !$unstyled,
      "inline-flex items-center",
      "flex-col-reverse" => $iconSide === 'left'
  ]) }}>
