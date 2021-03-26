@@ -8,7 +8,7 @@ use Honda\Ui\Support\UrlResolver;
 
 class Link extends Component
 {
-    public string $content;
+    public ?string $content;
     public string $href;
     public string $color;
     public bool $unstyled;
