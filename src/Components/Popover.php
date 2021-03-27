@@ -4,7 +4,9 @@
 namespace Honda\Ui\Components;
 
 
-class Popover
+use Illuminate\View\Component;
+
+class Popover extends Component
 {
     public function render()
     {
