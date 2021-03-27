@@ -35,6 +35,7 @@ class UiServiceProvider extends ServiceProvider
             Components\Password::class,
             Components\Pill::class,
             Components\Pin::class,
+            Components\Popover::class,
             Components\Progress::class,
             Components\Quantity::class,
             Components\Range::class,
@@ -51,7 +52,7 @@ class UiServiceProvider extends ServiceProvider
             Components\Toggle::class,
             Components\Value::class,
             Components\Variance::class,
-        ]);
+        ])
 
         if (!$this->app->runningInConsole()) {
             return;
