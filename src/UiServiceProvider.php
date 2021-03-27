@@ -52,7 +52,7 @@ class UiServiceProvider extends ServiceProvider
             Components\Toggle::class,
             Components\Value::class,
             Components\Variance::class,
-        ])
+        ]);
 
         if (!$this->app->runningInConsole()) {
             return;
