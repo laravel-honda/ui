@@ -48,6 +48,7 @@ class UiServiceProvider extends ServiceProvider
             Components\Stars::class,
             Components\StatCard::class,
             Components\Stats::class,
+            Components\Textarea::class,
             Components\Title::class,
             Components\Toggle::class,
             Components\Value::class,
