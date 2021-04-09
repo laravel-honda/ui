@@ -16,7 +16,6 @@ class UiServiceProvider extends ServiceProvider
             Components\Avatar::class,
             Components\Badge::class,
             Components\Button::class,
-            Components\Captcha::class,
             Components\Checkbox::class,
             Components\Checkbox::class,
             Components\Container::class,
