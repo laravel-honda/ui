@@ -2,7 +2,6 @@
 
 namespace Honda\Ui\Components;
 
-use App\Support\ArrayList;
 use Illuminate\Support\Collection;
 
 class Select extends Input
@@ -24,11 +23,12 @@ class Select extends Input
         bool $first = false,
         string $color = null,
         $selected = null
-    ) {
+    )
+    {
         parent::__construct($name, $label, $type, $icon, $iconSet, $first, $color);
 
-        $this->values   = $values;
-        $this->selected = ArrayList::make($selected)->toArray();
+        $this->values = $values;
+        $this->selected = $selected;
     }
 
     public function render()
