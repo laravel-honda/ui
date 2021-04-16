@@ -28,7 +28,7 @@ class Map extends Component
         $this->markers = $markers;
     }
 
-    public function render(): View
+    public function render()
     {
         return view('ui::map');
     }

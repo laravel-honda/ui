@@ -12,7 +12,7 @@
         @endif
         <input type="{{ $type }}" name="{{ $name }}" id="{{ $name }}"
             {{$attributes->class([
-                 "focus:ring-$color-500 focus:border-$color-500 block w-full border-gray-300 rounded-lg",
+                 "form-select focus:ring-$color-500 focus:border-$color-500 block w-full border-gray-300 rounded-lg",
                  'bg-gray-100' => $attributes->hasAnyOf('disabled', 'readonly'),
                  'pl-10' => $icon !==null,
                  'pl-4' => $icon === null,

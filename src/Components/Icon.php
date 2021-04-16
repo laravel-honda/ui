@@ -22,7 +22,7 @@ class Icon extends Component
         $this->set    = $set;
     }
 
-    public function render(): View
+    public function render()
     {
         return view('ui::icon');
     }

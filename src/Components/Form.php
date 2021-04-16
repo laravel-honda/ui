@@ -2,9 +2,9 @@
 
 namespace Honda\Ui\Components;
 
+use Honda\UrlResolver\UrlResolver;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
-use Honda\Ui\Support\UrlResolver;
 
 class Form extends Component
 {
@@ -19,7 +19,7 @@ class Form extends Component
         $this->hasFiles = $hasFiles;
     }
 
-    public function render(): View
+    public function render()
     {
         return view('ui::form');
     }

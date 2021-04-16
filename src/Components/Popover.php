@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Honda\Ui\Components;
-
 
 use Illuminate\View\Component;
 

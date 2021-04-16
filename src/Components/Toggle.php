@@ -3,8 +3,8 @@
 namespace Honda\Ui\Components;
 
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Str;
 use Illuminate\View\Component;
-use Str;
 
 class Toggle extends Component
 {

@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Honda\Ui\Components;
-
 
 class Textarea extends Input
 {

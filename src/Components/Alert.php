@@ -16,15 +16,15 @@ class Alert extends Component
     public function __construct(string $type, string $content = null, string $description = '', string $icon = 'info-circle', bool $closeable = false, bool $inSession = false)
     {
         $this->content = $inSession ? session($type) : $content;
-        $this->type = [
-                'error' => 'red',
+        $this->type    = [
+                'error'   => 'red',
                 'success' => 'green',
                 'warning' => 'yellow',
-                'info' => 'blue',
+                'info'    => 'blue',
             ][$type] ?? 'gray';
         $this->description = $description;
-        $this->icon = $icon;
-        $this->closeable = $closeable;
+        $this->icon        = $icon;
+        $this->closeable   = $closeable;
     }
 
     public function shouldRender(): bool
@@ -32,7 +32,7 @@ class Alert extends Component
         return !empty($this->content);
     }
 
-    public function render(): View
+    public function render()
     {
         return view('ui::alert');
     }

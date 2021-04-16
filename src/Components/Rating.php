@@ -2,8 +2,8 @@
 
 namespace Honda\Ui\Components;
 
+use Illuminate\Support\Str;
 use Illuminate\View\Component;
-use Str;
 
 class Rating extends Component
 {

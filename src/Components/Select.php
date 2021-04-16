@@ -3,18 +3,19 @@
 namespace Honda\Ui\Components;
 
 use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
 
 class Select extends Input
 {
     public array $values;
-    public array $selected;
+    public ?string $selected;
 
     /**
-     * @param array|string|Collection|null $values
-     * @param array|string|Collection|null $selected
+     * @param array|Collection $values
+     * @param string|null $selected
      */
     public function __construct(
-        array $values = [],
+        iterable $values = [],
         string $name = null,
         string $label = null,
         string $type = 'text',
@@ -27,7 +28,9 @@ class Select extends Input
     {
         parent::__construct($name, $label, $type, $icon, $iconSet, $first, $color);
 
-        $this->values = $values;
+        foreach ($values as $key => $value) {
+            $this->values[$key] = $value;
+        }
         $this->selected = $selected;
     }
 

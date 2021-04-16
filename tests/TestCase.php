@@ -3,8 +3,8 @@
 namespace Honda\Ui\Tests;
 
 use Gajus\Dindent\Indenter;
-use Orchestra\Testbench\TestCase as Base;
 use Honda\Ui\UiServiceProvider;
+use Orchestra\Testbench\TestCase as Base;
 use Tests\Concerns\InteractsWithViews;
 
 abstract class TestCase extends Base

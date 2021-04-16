@@ -41,7 +41,7 @@ class Avatar extends Component
         $this->status   = $status !== null ? static::STATUSES_COLOR[$status] : null;
     }
 
-    public function render(): View
+    public function render()
     {
         return view('ui::avatar');
     }

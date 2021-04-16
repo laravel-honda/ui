@@ -2,9 +2,9 @@
 
 namespace Honda\Ui\Components;
 
+use Honda\UrlResolver\UrlResolver;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
-use Honda\Ui\Support\UrlResolver;
 
 class Link extends Component
 {
@@ -27,7 +27,7 @@ class Link extends Component
         $this->iconSide = $iconSide;
     }
 
-    public function render(): View
+    public function render()
     {
         return view('ui::link');
     }

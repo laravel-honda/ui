@@ -11,7 +11,7 @@
             </div>
         @endif
         <select name="{{ $name }}" id="{{ $name }}" {{ $attributes->class([
-    "block w-full mt-1 rounded-lg focus:ring-$color-500 focus:border-$color-500 block w-full border-gray-300 rounded-lg text-gray-500",
+    "form-select block w-full mt-1 rounded-lg focus:ring-$color-500 focus:border-$color-500 block w-full border-gray-300 rounded-lg text-gray-500",
         'bg-gray-100 pointer-events-none' => $attributes->hasAnyOf('disabled', 'readonly'),
     'pl-10' => $icon !== null,
     'pl-4' => $icon === null
@@ -21,6 +21,4 @@
             @endforeach
         </select>
     </div>
-
-
 </div>

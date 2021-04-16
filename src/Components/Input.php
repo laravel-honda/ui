@@ -2,8 +2,8 @@
 
 namespace Honda\Ui\Components;
 
+use Illuminate\Support\Str;
 use Illuminate\View\Component;
-use Str;
 
 class Input extends Component
 {
@@ -19,6 +19,7 @@ class Input extends Component
     {
         $this->name    = $name;
         $this->label   = $label ?? ($name === null ? $name : Str::humanize($name));
+        /* @phpstan-ignore-next-line */
         $this->type    = $type ?? (in_array($name, ['email', 'password', 'url']) ? $name : 'text');
         $this->icon    = $icon;
         $this->iconSet = $iconSet;

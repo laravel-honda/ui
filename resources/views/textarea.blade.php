@@ -5,7 +5,7 @@
     <div class="@if ($name && $label) mt-1 @endif relative rounded-lg shadow-sm">
         <textarea name="{{ $name }}" id="{{ $name }}"
             {{$attributes->class([
-                 "focus:ring-$color-500 focus:border-$color-500 no-scrollbar block w-full border-gray-300 rounded-lg resize-none",
+                 "form-textarea focus:ring-$color-500 focus:border-$color-500 no-scrollbar block w-full border-gray-300 rounded-lg resize-none",
                  'bg-gray-100' => $attributes->hasAnyOf('disabled', 'readonly'),
                  'pl-10' => $icon !==null,
                  'pl-4' => $icon === null,

@@ -2,8 +2,8 @@
 
 namespace Honda\Ui\Components;
 
+use Honda\UrlResolver\UrlResolver;
 use Illuminate\View\Component;
-use Honda\Ui\Support\UrlResolver;
 
 class Badge extends Component
 {
@@ -17,13 +17,13 @@ class Badge extends Component
 
     public function __construct(string $content = null, string $color = null, bool $dotted = false, bool $disabled = false, string $href = null, string $icon = null, string $iconSet = 'tabler')
     {
-        $this->content  = $content;
-        $this->color    = $disabled ? 'gray' : ($color ?? settings('color'));
-        $this->icon     = $icon;
-        $this->iconSet  = $iconSet;
-        $this->dotted   = $dotted;
+        $this->content = $content;
+        $this->color = $disabled ? 'gray' : ($color ?? settings('color'));
+        $this->icon = $icon;
+        $this->iconSet = $iconSet;
+        $this->dotted = $dotted;
         $this->disabled = $disabled;
-        $this->href     = $href !== null ? UrlResolver::guess($href) : null;
+        $this->href = $href !== null ? UrlResolver::guess($href) : null;
     }
 
     public function render()

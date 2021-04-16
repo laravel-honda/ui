@@ -2,23 +2,23 @@
 
 namespace Honda\Ui\Components;
 
+use Illuminate\Support\Str;
 use Illuminate\View\Component;
-use Str;
 
 class Pin extends Component
 {
-    public string $name;
+    public ?string $name;
     public string $color;
-    public string $label;
+    public ?string $label;
     public int $length;
     public bool $hideLabel;
 
-    public function __construct(string $name, string $label = null, string $color = 'blue', int $length = 4, bool $hideLabel = false)
+    public function __construct(string $name = null, string $label = null, string $color = 'blue', int $length = 4, bool $hideLabel = false)
     {
-        $this->name      = $name;
-        $this->label     = $label ?? ($name === null ? $name : Str::humanize($name));
-        $this->color     = $color;
-        $this->length    = $length;
+        $this->name = $name;
+        $this->label = $label ?? ($name === null ? $name : Str::humanize($name));
+        $this->color = $color;
+        $this->length = $length;
         $this->hideLabel = $hideLabel;
     }
 

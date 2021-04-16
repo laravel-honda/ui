@@ -1,5 +1,5 @@
 <x-assets-script href="https://unpkg.com/create-file-list"/>
-<x-assets-script>
+<x-assets-raw-script>
     function dataFileDnD() {
     return {
     files: [],
@@ -66,7 +66,7 @@
     }
     };
     }
-</x-assets-script>
+</x-assets-raw-script>
 <div class="w-full flex flex-col @if(!$first) mt-4 @endif">
     @if (!$hideLabel || $name === null)
         <label class="text-gray-700" for="{{ $name }}">{{ $label }}</label>
