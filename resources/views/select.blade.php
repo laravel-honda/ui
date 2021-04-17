@@ -17,7 +17,7 @@
     'pl-4' => $icon === null
 ]) }}>
             @foreach($values as $k => $v)
-                <option value="{{ $k }}" @if ($k === $selected) selected @endif>{{ $v }}</option>
+                <option value="{{ $k }}" @if ((string) $k === (string) $selected) selected @endif>{{ $v }}</option>
             @endforeach
         </select>
     </div>
