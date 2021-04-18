@@ -7,7 +7,7 @@ use Illuminate\Support\Str;
 
 class Select extends Input
 {
-    public array $values;
+    public array $values = [];
     public ?string $selected;
 
     /**
