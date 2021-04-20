@@ -21,4 +21,6 @@
             @endforeach
         </select>
     </div>
+
+    <x-ui-input-error :name="$name"/>
 </div>

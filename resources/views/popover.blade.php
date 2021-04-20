@@ -1,5 +1,4 @@
 <div x-data="{ open: false }" class="relative">
-
     <!-- Trigger element -->
     <div
         @mouseover="open = true" @mouseleave="open = false" class="inline-block">

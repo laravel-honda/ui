@@ -26,6 +26,7 @@ class UiServiceProvider extends ServiceProvider
             Components\Form::class,
             Components\Icon::class,
             Components\Input::class,
+            Components\InputError::class,
             Components\Link::class,
             Components\Map::class,
             Components\Markdown::class,
@@ -37,7 +38,6 @@ class UiServiceProvider extends ServiceProvider
             Components\Popover::class,
             Components\Progress::class,
             Components\Quantity::class,
-            Components\Range::class,
             Components\Rating::class,
             Components\SearchableInput::class,
             Components\SectionTitle::class,
@@ -60,6 +60,6 @@ class UiServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__ . '/../resources/views' => resource_path('views/vendor/ui'),
-        ], 'ui');
+        ], 'ui-components');
     }
 }

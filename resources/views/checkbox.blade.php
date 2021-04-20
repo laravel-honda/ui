@@ -7,4 +7,6 @@
         {{ old($name) ? 'checked' : '' }} {{ $attributes->except('class') }} @if ($checked) checked @endif />
 
     <label class="text-gray-700 ml-2" for="{{ $name }}">{{ $label }}</label>
+
+    <x-ui-input-error :name="$name"/>
 </div>
