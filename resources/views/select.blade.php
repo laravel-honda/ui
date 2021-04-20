@@ -16,9 +16,13 @@
     'pl-10' => $icon !== null,
     'pl-4' => $icon === null
 ]) }}>
-            @foreach($values as $k => $v)
-                <option value="{{ $k }}" @if ((string) $k === (string) $selected) selected @endif>{{ $v }}</option>
-            @endforeach
+            @empty($values)
+                @foreach($values as $k => $v)
+                    <option value="{{ $k }}" @if ((string) $k === (string) $selected) selected @endif>{{ $v }}</option>
+                @endforeach
+            @else
+                {{ $slot }}
+            @endempty
         </select>
     </div>
 
