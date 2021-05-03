@@ -1,6 +1,8 @@
-<div class="@if ($first) mt-4 @endif w-full">
-    <label class="text-gray-700" for="{{ $name }}">{{ $label }}</label>
-    <div class="flex items-start mt-1">
+<div class="@if ($inline) flex items-center @endif @if ($first) mt-4 @endif w-full">
+    @if (!$hideLabel )
+        <label class="text-gray-700" for="{{ $name }}">{{ $label }}</label>
+    @endif
+    <div class="flex items-start @if (!$hideLabel) mt-1 @endif @if($inline) ml-4 @endif">
         @isset($outsideLeft)
             <div class="border border-gray-300 rounded-lg border-r-0 rounded-r-none whitespace-nowrap py-2">
                 {{ $outsideLeft }}
@@ -15,9 +17,9 @@
     "focus:outline-none focus:ring-$color-500 focus:border-$color-500 block w-full border-gray-300 rounded-lg",
     "border-l-0 rounded-l-none" => isset($insideLeft),
     "rounded-l-none" => isset($outsideLeft),
-        "border-r-0 rounded-r-none" => isset($insideRight),
-    "rounded-r-none" => isset($outsideRight)
-]) }}>
+    "border-r-0 rounded-r-none" => isset($insideRight),
+    "rounded-r-none" => isset($outsideRight),
+]) }} @if ($disabled) disabled aria-disabled="true" @endif @if ($readonly) readonly aria-readonly="true" @endif>
         @isset($insideRight)
             <div class="border border-gray-300 rounded-lg border-l-0 rounded-l-none whitespace-nowrap py-2">
                 {{ $insideRight }}
