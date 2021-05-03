@@ -2,6 +2,12 @@
 
 namespace Honda\Ui;
 
+use Honda\Ui\View\Components\Button;
+use Honda\Ui\View\Components\Button\Circular;
+use Honda\Ui\View\Components\Button\Group;
+use Honda\Ui\View\Components\Button\Secondary;
+use Honda\Ui\View\Components\Button\White;
+use Honda\Ui\View\Components\Input;
 use Illuminate\Support\ServiceProvider;
 
 class UiServiceProvider extends ServiceProvider
@@ -10,7 +16,14 @@ class UiServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'ui');
         // Components are registered manually so Laravel Idea can autocomplete them. You're welcome.
-        $this->loadViewComponentsAs('ui', []);
+        $this->loadViewComponentsAs('ui', [
+            Button::class,
+            Secondary::class,
+            Circular::class,
+            White::class,
+            Group::class,
+            Input::class,
+        ]);
 
         if (!$this->app->runningInConsole()) {
             return;
