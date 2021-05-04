@@ -2,6 +2,7 @@
 
 namespace Honda\Ui\View\Components;
 
+use Honda\Ui\Types\Direction;
 use Honda\Ui\Types\Icon;
 use Illuminate\View\View;
 
@@ -12,7 +13,7 @@ class Input extends Component
     public string $label;
     public string $type;
     public Icon $icon;
-    public ?string $hint;
+    public Direction $iconSide;
     public bool $hideLabel;
     public bool $first;
     public bool $disabled;
@@ -25,7 +26,7 @@ class Input extends Component
         string $label = null,
         string $type = null,
         string $icon = null,
-        string $hint = null,
+        string $iconSide = 'left',
         bool $hideLabel = false,
         bool $first = false,
         bool $disabled = false,
@@ -37,7 +38,7 @@ class Input extends Component
         $this->label     = $label ?? $this->humanize($name);
         $this->type      = $type ?? $this->guessTypeFromName($name);
         $this->icon      = Icon::fromString($icon);
-        $this->hint      = $hint;
+        $this->iconSide  = new Direction($iconSide);
         $this->hideLabel = $hideLabel;
         $this->first     = $first;
         $this->disabled  = $disabled;
@@ -62,7 +63,6 @@ class Input extends Component
 
         return 'text';
     }
-
 
     public function render(): View
     {
