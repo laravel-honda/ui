@@ -10,7 +10,7 @@
     ],
     "require": {
         "php": "^7.4",
-        "honda/url-resolver": "^0.1.1"
+        "honda/url-resolver": "^0.2.0"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.16.4",
