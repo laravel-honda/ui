@@ -36,7 +36,7 @@ class UiServiceProvider extends ServiceProvider
             Markdown::class,
             Password::class,
             Checkbox::class,
-            Form::class
+            Form::class,
         ]);
 
         if (!$this->app->runningInConsole()) {
