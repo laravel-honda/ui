@@ -1,5 +1,5 @@
 <form method="{{ $method !== 'GET' ? 'POST' : 'GET' }}"
-      action="{{ $action }}" {!! $hasFiles ? 'enctype="multipart/form-data"' : '' !!} {{ $attributes->merge(['class' => 'w-full']) }}>
+      action="{{ $action }}" {!! $hasFiles ? 'enctype="multipart/form-data"' : '' !!} {{ $attributes }}>
     @csrf
     @method($method)
 
