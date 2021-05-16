@@ -9,7 +9,8 @@ use Honda\Ui\View\Components\Button\Secondary;
 use Honda\Ui\View\Components\Button\White;
 use Honda\Ui\View\Components\CurrentYear;
 use Honda\Ui\View\Components\Input;
-use Honda\Ui\View\Components\Select;
+use Honda\Ui\View\Components\Markdown;
+use Honda\Ui\View\Components\Paragraph;
 use Honda\Ui\View\Title;
 use Illuminate\Support\ServiceProvider;
 
@@ -27,7 +28,9 @@ class UiServiceProvider extends ServiceProvider
             Group::class,
             Input::class,
             CurrentYear::class,
-            Title::class
+            Title::class,
+            Paragraph::class,
+            Markdown::class,
         ]);
 
         if (!$this->app->runningInConsole()) {

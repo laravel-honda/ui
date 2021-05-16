@@ -1,21 +1,21 @@
 <?php
 
-namespace Honda\Ui\View;
+namespace Honda\Ui\View\Components;
 
 use Honda\Ui\View\Components\Component;
 use Illuminate\View\View;
 
-class Title extends Component
+class Paragraph extends Component
 {
     public function __construct(
-        public string $level,
         public ?string $content = null,
-        public ?string $color = null
+        public string $color = 'gray',
+        public bool $markdown = false
     ) {
     }
 
     public function render(): View
     {
-        return view('ui::title');
+        return view('ui::paragraph');
     }
 }
