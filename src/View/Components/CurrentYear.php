@@ -6,7 +6,7 @@ namespace Honda\Ui\View\Components;
 
 use Illuminate\View\View;
 
-class CurrentYear extends \Illuminate\View\Component
+class CurrentYear extends Component
 {
     public function render(): View
     {
