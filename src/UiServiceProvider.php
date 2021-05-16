@@ -11,7 +11,7 @@ use Honda\Ui\View\Components\CurrentYear;
 use Honda\Ui\View\Components\Input;
 use Honda\Ui\View\Components\Markdown;
 use Honda\Ui\View\Components\Paragraph;
-use Honda\Ui\View\Title;
+use Honda\Ui\View\Components\Title;
 use Illuminate\Support\ServiceProvider;
 
 class UiServiceProvider extends ServiceProvider
