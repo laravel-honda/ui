@@ -32,7 +32,7 @@ class UiServiceProvider extends ServiceProvider
             Title::class,
             Paragraph::class,
             Markdown::class,
-            Password::class
+            Password::class,
         ]);
 
         if (!$this->app->runningInConsole()) {

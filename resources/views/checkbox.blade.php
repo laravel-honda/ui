@@ -1,0 +1,11 @@
+<x-ui-input
+    type="checkbox"
+    :name="$name"
+    :color="$color"
+    :label="$label"
+    :hide-label="$hideLabel"
+    :first="$first"
+    :disabled="$disabled"
+    :readonly="$readonly"
+    inline
+/>
