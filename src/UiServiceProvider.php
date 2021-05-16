@@ -9,6 +9,7 @@ use Honda\Ui\View\Components\Button\Secondary;
 use Honda\Ui\View\Components\Button\White;
 use Honda\Ui\View\Components\Checkbox;
 use Honda\Ui\View\Components\CurrentYear;
+use Honda\Ui\View\Components\Form;
 use Honda\Ui\View\Components\Input;
 use Honda\Ui\View\Components\Markdown;
 use Honda\Ui\View\Components\Paragraph;
@@ -35,6 +36,7 @@ class UiServiceProvider extends ServiceProvider
             Markdown::class,
             Password::class,
             Checkbox::class,
+            Form::class
         ]);
 
         if (!$this->app->runningInConsole()) {
