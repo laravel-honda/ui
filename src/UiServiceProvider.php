@@ -8,6 +8,7 @@ use Honda\Ui\View\Components\Button\Group;
 use Honda\Ui\View\Components\Button\Secondary;
 use Honda\Ui\View\Components\Button\White;
 use Honda\Ui\View\Components\Input;
+use Honda\Ui\View\Components\Select;
 use Illuminate\Support\ServiceProvider;
 
 class UiServiceProvider extends ServiceProvider
@@ -23,6 +24,7 @@ class UiServiceProvider extends ServiceProvider
             White::class,
             Group::class,
             Input::class,
+            Select::class,
         ]);
 
         if (!$this->app->runningInConsole()) {
