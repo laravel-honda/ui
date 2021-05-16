@@ -2,6 +2,13 @@
 
 namespace Honda\Ui;
 
+use Honda\Ui\View\Components\Button;
+use Honda\Ui\View\Components\Button\Circular;
+use Honda\Ui\View\Components\Button\Group;
+use Honda\Ui\View\Components\Button\Secondary;
+use Honda\Ui\View\Components\Button\White;
+use Honda\Ui\View\Components\Input;
+use Honda\Ui\View\Components\Select;
 use Illuminate\Support\ServiceProvider;
 
 class UiServiceProvider extends ServiceProvider
@@ -11,47 +18,13 @@ class UiServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'ui');
         // Components are registered manually so Laravel Idea can autocomplete them. You're welcome.
         $this->loadViewComponentsAs('ui', [
-            Components\ActionPanel::class,
-            Components\Alert::class,
-            Components\Avatar::class,
-            Components\Badge::class,
-            Components\Button::class,
-            Components\Checkbox::class,
-            Components\Checkbox::class,
-            Components\Container::class,
-            Components\CountingBadge::class,
-            Components\Divider::class,
-            Components\Dot::class,
-            Components\File::class,
-            Components\Form::class,
-            Components\Icon::class,
-            Components\Input::class,
-            Components\InputError::class,
-            Components\Link::class,
-            Components\Map::class,
-            Components\Markdown::class,
-            Components\Overline::class,
-            Components\Paragraph::class,
-            Components\Password::class,
-            Components\Pill::class,
-            Components\Pin::class,
-            Components\Popover::class,
-            Components\Progress::class,
-            Components\Quantity::class,
-            Components\Rating::class,
-            Components\SearchableInput::class,
-            Components\SectionTitle::class,
-            Components\Select::class,
-            Components\Social::class,
-            Components\Spinner::class,
-            Components\Stars::class,
-            Components\StatCard::class,
-            Components\Stats::class,
-            Components\Textarea::class,
-            Components\Title::class,
-            Components\Toggle::class,
-            Components\Value::class,
-            Components\Variance::class,
+            Button::class,
+            Secondary::class,
+            Circular::class,
+            White::class,
+            Group::class,
+            Input::class,
+            Select::class,
         ]);
 
         if (!$this->app->runningInConsole()) {
