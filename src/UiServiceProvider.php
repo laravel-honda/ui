@@ -7,8 +7,10 @@ use Honda\Ui\View\Components\Button\Circular;
 use Honda\Ui\View\Components\Button\Group;
 use Honda\Ui\View\Components\Button\Secondary;
 use Honda\Ui\View\Components\Button\White;
+use Honda\Ui\View\Components\CurrentYear;
 use Honda\Ui\View\Components\Input;
 use Honda\Ui\View\Components\Select;
+use Honda\Ui\View\Title;
 use Illuminate\Support\ServiceProvider;
 
 class UiServiceProvider extends ServiceProvider
@@ -24,7 +26,8 @@ class UiServiceProvider extends ServiceProvider
             White::class,
             Group::class,
             Input::class,
-            Select::class,
+            CurrentYear::class,
+            Title::class
         ]);
 
         if (!$this->app->runningInConsole()) {
