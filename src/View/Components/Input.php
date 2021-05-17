@@ -26,7 +26,7 @@ class Input extends Component
         string $label = null,
         string $type = null,
         string $icon = null,
-        string $iconSide = 'left',
+        Direction | string $iconSide = 'left',
         bool $hideLabel = false,
         bool $first = false,
         bool $disabled = false,
@@ -38,7 +38,7 @@ class Input extends Component
         $this->label     = $label ?? $this->humanize($name);
         $this->type      = $type ?? $this->guessTypeFromName($name);
         $this->icon      = Icon::fromString($icon);
-        $this->iconSide  = new Direction($iconSide);
+        $this->iconSide  = is_string($iconSide) ? new Direction($iconSide) : $iconSide;
         $this->hideLabel = $hideLabel;
         $this->first     = $first;
         $this->disabled  = $disabled;

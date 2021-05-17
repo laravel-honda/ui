@@ -18,6 +18,11 @@ class Direction
         $this->current = $direction;
     }
 
+    public function __toString(): string
+    {
+        return $this->current;
+    }
+
     public function is(string $comparison): bool
     {
         return $this->current === $comparison;
