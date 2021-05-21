@@ -1,5 +1,5 @@
 <div
-    class="@if ($inline) flex items-center @endif @if ($first) mt-4 @endif w-full @if ($disabled || $readonly) opacity-50 @endif">
+    class="@if ($inline) flex items-center @endif @if (!$first) mt-4 @endif w-full @if ($disabled || $readonly) opacity-50 @endif">
     @if (!$hideLabel )
         <label class="text-gray-700" for="{{ $name }}">{{ $label }}</label>
     @endif

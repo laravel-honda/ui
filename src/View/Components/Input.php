@@ -2,6 +2,7 @@
 
 namespace Honda\Ui\View\Components;
 
+use Honda\Ui\Support\Str;
 use Honda\Ui\Types\Direction;
 use Honda\Ui\Types\Icon;
 use Illuminate\View\View;
@@ -26,34 +27,27 @@ class Input extends Component
         string $label = null,
         string $type = null,
         string $icon = null,
-        Direction | string $iconSide = 'left',
+        Direction|string $iconSide = 'left',
         bool $hideLabel = false,
         bool $first = false,
         bool $disabled = false,
         bool $readonly = false,
         bool $inline = false
-    ) {
-        $this->name      = $name;
-        $this->color     = $color;
-        $this->label     = $label ?? $this->humanize($name);
-        $this->type      = $type ?? $this->guessTypeFromName($name);
-        $this->icon      = Icon::fromString($icon);
-        $this->iconSide  = is_string($iconSide) ? new Direction($iconSide) : $iconSide;
+    )
+    {
+        $this->name = $name;
+        $this->color = $color;
+        $this->label = $label ?? Str::humanize($name);
+        $this->type = $type ?? $this->guessTypeFromName($name);
+        $this->icon = Icon::fromString($icon);
+        $this->iconSide = is_string($iconSide) ? new Direction($iconSide) : $iconSide;
         $this->hideLabel = $hideLabel;
-        $this->first     = $first;
-        $this->disabled  = $disabled;
-        $this->readonly  = $readonly;
-        $this->inline    = $inline;
+        $this->first = $first;
+        $this->disabled = $disabled;
+        $this->readonly = $readonly;
+        $this->inline = $inline;
     }
 
-    protected function humanize(string $text): string
-    {
-        return ucwords(str_replace(
-            '#[space]',
-            ' ',
-            trim(preg_replace('/[^\x21-\x7E]/', '', str_replace(['_', '-'], '#[space]', $text)) ?: '')
-        ));
-    }
 
     protected function guessTypeFromName(string $name): string
     {
