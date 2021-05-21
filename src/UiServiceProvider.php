@@ -11,6 +11,7 @@ use Honda\Ui\View\Components\Checkbox;
 use Honda\Ui\View\Components\CurrentYear;
 use Honda\Ui\View\Components\Form;
 use Honda\Ui\View\Components\Input;
+use Honda\Ui\View\Components\InputError;
 use Honda\Ui\View\Components\Markdown;
 use Honda\Ui\View\Components\Paragraph;
 use Honda\Ui\View\Components\Password;
@@ -37,6 +38,7 @@ class UiServiceProvider extends ServiceProvider
             Password::class,
             Checkbox::class,
             Form::class,
+            InputError::class
         ]);
 
         if (!$this->app->runningInConsole()) {
