@@ -7,7 +7,7 @@ use Illuminate\View\View;
 
 class InputError extends Component
 {
-    public function __construct(public Icon $icon)
+    public function __construct(public string $name)
     {
     }
 
