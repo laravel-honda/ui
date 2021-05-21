@@ -48,5 +48,5 @@
             </div>
         @endisset
     </div>
-    <x-ui-input-error name="$name" />
+    <x-ui-input-error class="mt-2" :name="$name"/>
 </div>
