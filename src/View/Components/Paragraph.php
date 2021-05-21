@@ -2,7 +2,6 @@
 
 namespace Honda\Ui\View\Components;
 
-use Honda\Ui\View\Components\Component;
 use Illuminate\View\View;
 
 class Paragraph extends Component

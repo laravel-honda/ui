@@ -5,7 +5,6 @@
         :color="$color"
         :label="$label"
         :icon="$icon"
-        :icon-side="$iconSide"
         :hide-label="$hideLabel"
         :first="$first"
         :disabled="$disabled"

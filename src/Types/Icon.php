@@ -24,7 +24,7 @@ class Icon implements Htmlable
 
     public static function fromString(?string $icon): Icon
     {
-        if (is_null($icon)) {
+        if (empty($icon)) {
             return new self(null, null);
         }
 

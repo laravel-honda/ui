@@ -15,8 +15,7 @@ class Circular extends Component
         public string $color,
         public string $label,
         public string $radius = 'full'
-    )
-    {
+    ) {
         $this->icon = Icon::fromString($icon);
     }
 

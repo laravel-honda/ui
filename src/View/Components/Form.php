@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Honda\Ui\View\Components;
-
 
 use Honda\UrlResolver\UrlResolver;
 

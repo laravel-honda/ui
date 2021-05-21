@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Concerns;
+namespace Honda\Ui\Tests\Concerns;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Facades\View as ViewFacade;

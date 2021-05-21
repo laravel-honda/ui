@@ -48,5 +48,9 @@
             </div>
         @endisset
     </div>
-
+    @error($name)
+        <x-ui-input-error>
+            {{ $message }}
+        </x-ui-input-error>
+    @enderror
 </div>

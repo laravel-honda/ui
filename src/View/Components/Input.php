@@ -51,7 +51,7 @@ class Input extends Component
         return ucwords(str_replace(
             '#[space]',
             ' ',
-            trim(preg_replace('/[^\x21-\x7E]/', '', str_replace(['_', '-'], '#[space]', $text)))
+            trim(preg_replace('/[^\x21-\x7E]/', '', str_replace(['_', '-'], '#[space]', $text)) ?: '')
         ));
     }
 
