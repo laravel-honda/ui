@@ -2,6 +2,8 @@
 
 namespace Honda\Ui;
 
+use Honda\Ui\View\Components\Alert;
+use Honda\Ui\View\Components\Badge;
 use Honda\Ui\View\Components\Button;
 use Honda\Ui\View\Components\Button\Circular;
 use Honda\Ui\View\Components\Button\Group;
@@ -15,6 +17,8 @@ use Honda\Ui\View\Components\InputError;
 use Honda\Ui\View\Components\Markdown;
 use Honda\Ui\View\Components\Paragraph;
 use Honda\Ui\View\Components\Password;
+use Honda\Ui\View\Components\Select;
+use Honda\Ui\View\Components\Textarea;
 use Honda\Ui\View\Components\Title;
 use Illuminate\Support\ServiceProvider;
 
@@ -38,7 +42,11 @@ class UiServiceProvider extends ServiceProvider
             Password::class,
             Checkbox::class,
             Form::class,
-            InputError::class
+            InputError::class,
+            Badge::class,
+            Select::class,
+            Alert::class,
+            Textarea::class,
         ]);
 
         if (!$this->app->runningInConsole()) {

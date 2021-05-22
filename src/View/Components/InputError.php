@@ -2,7 +2,6 @@
 
 namespace Honda\Ui\View\Components;
 
-use Honda\Ui\Types\Icon;
 use Illuminate\View\View;
 
 class InputError extends Component
