@@ -16,7 +16,7 @@ class Select extends Component
         public bool $first = false,
         public bool $inline = false
     ) {
-        $this->label = $label ?? Str::humanize($$this->name);
+        $this->label = $label ?? Str::humanize($this->name);
     }
 
     public function render()
