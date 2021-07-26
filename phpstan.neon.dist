@@ -2,11 +2,6 @@ parameters:
     level: max
     paths:
         - src
-
     checkMissingIterableValueType: false
     checkGenericClassInNonGenericObjectType: false
     reportUnmatchedIgnoredErrors: false
-    ignoreErrors:
-        - '#Method [a-zA-Z0-9\\_]+::render\(\)  should return Closure|Illuminate\Contracts\Support\Htmlable|Illuminate\Contracts\View\View|string but returns [a-zA-Z0-9\\_|]+\.#'
-        - '#Function settings not found#'
-        - '#Call to an undefined static method Illuminate\\Support\\Str::humanize\(\)#'

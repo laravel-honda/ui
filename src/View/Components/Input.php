@@ -13,7 +13,7 @@ class Input extends Component
     public string $color;
     public string $label;
     public string $type;
-    public Icon $icon;
+    public ?Icon $icon;
     public Direction $iconSide;
     public bool $hideLabel;
     public bool $first;
@@ -27,24 +27,25 @@ class Input extends Component
         string $label = null,
         string $type = null,
         string $icon = null,
-        Direction | string $iconSide = 'left',
+        string $iconSide = 'left',
         bool $hideLabel = false,
         bool $first = false,
         bool $disabled = false,
         bool $readonly = false,
         bool $inline = false
-    ) {
-        $this->name      = $name;
-        $this->color     = $color;
-        $this->label     = $label ?? Str::humanize($name);
-        $this->type      = $type ?? $this->guessTypeFromName($name);
-        $this->icon      = Icon::fromString($icon);
-        $this->iconSide  = is_string($iconSide) ? new Direction($iconSide) : $iconSide;
+    )
+    {
+        $this->name = $name;
+        $this->color = $color;
+        $this->label = $label ?? Str::humanize($name);
+        $this->type = $type ?? $this->guessTypeFromName($name);
+        $this->icon = $icon !== null ? Icon::fromString($icon) : null;
+        $this->iconSide = new Direction($iconSide);
         $this->hideLabel = $hideLabel;
-        $this->first     = $first;
-        $this->disabled  = $disabled;
-        $this->readonly  = $readonly;
-        $this->inline    = $inline;
+        $this->first = $first;
+        $this->disabled = $disabled;
+        $this->readonly = $readonly;
+        $this->inline = $inline;
     }
 
     protected function guessTypeFromName(string $name): string
