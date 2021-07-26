@@ -7,44 +7,26 @@ use Illuminate\Support\HtmlString;
 
 class Icon implements Htmlable
 {
-    public static string $defaultSet = '';
-    public ?string $icon;
-    public ?string $set;
+    public string $icon;
     public array $attributes;
 
     public function __construct(
-        ?string $icon,
-        ?string $set,
+        string $icon,
         array $attributes = []
-    ) {
-        $this->icon       = $icon;
-        $this->set        = $set ?? static::$defaultSet;
+    )
+    {
+        $this->icon = $icon;
         $this->attributes = $attributes;
     }
 
-    public static function fromString(?string $icon): Icon
+    public static function fromString(string $icon): Icon
     {
-        if (empty($icon)) {
-            return new self(null, null);
-        }
-
-        [$icon, $set] = explode(',', $icon);
-
-        return new self(trim($icon), trim($set));
+        return new self(trim($icon));
     }
 
     public function __toString(): string
     {
-        if (!$this->isNotNull()) {
-            return '';
-        }
-
-        return svg($this->set . '-' . $this->icon, $this->attributes)->toHtml();
-    }
-
-    public function isNotNull(): bool
-    {
-        return !is_null($this->icon);
+        return svg($this->icon, $this->attributes)->toHtml();
     }
 
     public function with(array $attributes): self

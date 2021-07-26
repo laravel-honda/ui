@@ -12,11 +12,11 @@
 ]) }}
     >
 
-        @if ($icon->isNotNull())
+        @if ($icon!== null)
             {{ $icon }}
         @endif
 
         <span
-            class="inline-block font-semibold leading-none @if ($icon->isNotNull()) ml-2 @endif">{{ $slot }}</span>
+            class="inline-block font-semibold leading-none @if ($icon!== null) ml-2 @endif">{{ $slot }}</span>
     </a>
 </div>

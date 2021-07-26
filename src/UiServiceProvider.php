@@ -12,11 +12,13 @@ use Honda\Ui\View\Components\Button\White;
 use Honda\Ui\View\Components\Checkbox;
 use Honda\Ui\View\Components\CurrentYear;
 use Honda\Ui\View\Components\Form;
+use Honda\Ui\View\Components\Icon;
 use Honda\Ui\View\Components\Input;
 use Honda\Ui\View\Components\InputError;
 use Honda\Ui\View\Components\Markdown;
 use Honda\Ui\View\Components\Paragraph;
 use Honda\Ui\View\Components\Password;
+use Honda\Ui\View\Components\Pin;
 use Honda\Ui\View\Components\Select;
 use Honda\Ui\View\Components\Textarea;
 use Honda\Ui\View\Components\Title;
@@ -42,6 +44,8 @@ class UiServiceProvider extends ServiceProvider
             Password::class,
             Checkbox::class,
             Form::class,
+            Pin::class,
+            Icon::class,
             InputError::class,
             Badge::class,
             Select::class,
