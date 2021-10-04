@@ -10,13 +10,13 @@ class Badge extends Component
 {
     public string $color;
     public ?string $href;
-    public Icon $icon;
+    public ?Icon $icon;
     public bool $disabled;
 
     public function __construct(string $color, bool $disabled = false, string $href = null, ?Icon $icon = null)
     {
         $this->color    = $color;
-        $this->icon     = Icon::fromString($icon);
+        $this->icon     = $icon !== null ? Icon::fromString($icon) : null;
         $this->disabled = $disabled;
         $this->href     = $href !== null ? UrlResolver::guess($href) : null;
     }
